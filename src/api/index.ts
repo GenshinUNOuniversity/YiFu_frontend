@@ -4,9 +4,9 @@ import user from './user';
 import report from './report';
 import chargehistory from './chargehistory';
 import track from './track';
-import news from './news';
+// import news from './news';
 import station from './station';
-import banner from './banner';
+// import banner from './banner';
 import blacklist from './blacklist';
 
 export default {
@@ -16,8 +16,8 @@ export default {
   ...report,
   ...chargehistory,
   ...track,
-  ...news,
+  // ...news,
   ...station,
-  ...banner,
+  // ...banner,
   ...blacklist,
 };

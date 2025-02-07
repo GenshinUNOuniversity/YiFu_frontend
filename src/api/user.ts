@@ -4,35 +4,6 @@ import Request from 'luch-request';
  * 用户详情信息
  */
 export interface UserProfileVO {
-  extend: UserProfileExtendVO;
-  info: UserProfileInfoVO;
-  /**
-   * 权限
-   */
-  role: Role;
-}
-
-/**
- * 用户拓展信息
- */
-export interface UserProfileExtendVO {
-  manager?: UserProfileManagerInfoExtendVO;
-}
-
-/**
- * 站点管理员拓展信息
- */
-export interface UserProfileManagerInfoExtendVO {
-  /**
-   * 管理的站点id
-   */
-  stationId: number;
-}
-
-/**
- * 用户信息
- */
-export interface UserProfileInfoVO {
   /**
    * 头像地址
    */
@@ -58,13 +29,25 @@ export interface UserProfileInfoVO {
    */
   realName: string;
   /**
-   * 学号
+   * 编号
    */
-  studentId?: string;
+  Id?: string;
   /**
    * 用户类型
    */
   userType: UserType;
+  /**
+   * 权限
+   */
+  role: Role;
+  /**
+   * 管理的站点id
+   */
+  stationId?: number;
+  /**
+   * 信用分
+   */
+  honest?: number;
 }
 
 /**
@@ -98,23 +81,6 @@ export enum Role {
 }
 
 /**
- * 用户拓展信息
- */
-export interface UserProfileExtendVO {
-  manager?: UserProfileManagerInfoExtendVO;
-}
-
-/**
- * 站点管理员拓展信息
- */
-export interface UserProfileManagerInfoExtendVO {
-  /**
-   * 管理的站点id
-   */
-  stationId: number;
-}
-
-/**
  * 用户状态（正常/封禁）
  */
 export interface UserStatusVO {
@@ -142,40 +108,6 @@ export interface UserBlackListReasonVO {
   managerName: string;
   stationName: string;
   reason: string;
-}
-
-/**
- * 用户信息
- */
-export interface UserProfileInfoVO {
-  /**
-   * 头像地址
-   */
-  avatarUrl: string;
-  /**
-   * 学院
-   */
-  facultyId?: number;
-  /**
-   * 昵称
-   */
-  nickname: string;
-  /**
-   * 手机号码
-   */
-  phone: string;
-  /**
-   * 真实姓名
-   */
-  realName: string;
-  /**
-   * 学号
-   */
-  studentId?: string;
-  /**
-   * 信用分
-   */
-  Honesty?: number;
 }
 
 /**
