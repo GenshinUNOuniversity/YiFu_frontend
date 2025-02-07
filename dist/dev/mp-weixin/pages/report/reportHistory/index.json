@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "举报历史",
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "bottom-loading-prompt": "../../components/bottomLoadingPrompt/bottomLoadingPrompt"
+  }
+}

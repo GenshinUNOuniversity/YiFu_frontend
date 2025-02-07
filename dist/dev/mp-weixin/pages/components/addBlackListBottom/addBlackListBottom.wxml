@@ -1,0 +1,1 @@
+<button disabled="{{a}}" type="warn" bindtap="{{b}}"><slot></slot></button>

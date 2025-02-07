@@ -1,0 +1,1 @@
+<view class="ctn data-v-1eb4639f"><view class="data-v-1eb4639f" style="font-size:22px;font-weight:400">{{a}}</view><view class="data-v-1eb4639f" style="font-size:15px;color:#b2b2b2">创建时间：{{b}}</view><rich-text class="data-v-1eb4639f" style="font-size:15px;width:100%;overflow:hidden" nodes="{{c}}"></rich-text></view>

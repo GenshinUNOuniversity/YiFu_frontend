@@ -1,0 +1,25 @@
+
+.font-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.font-title2 {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.font-body {
+  font-size: 30rpx;
+}
+.font-caption {
+  font-size: 26rpx;
+}
+.font-caption2 {
+  font-size: 24rpx;
+}
+.divider-color {
+  background: rgba(0, 0, 0, 0.1);
+}
+page {
+  background: #f1f1f1;
+}
+page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

@@ -1,0 +1,37 @@
+
+.title.data-v-f66f984f {
+  text-align: center;
+  font-size: 50rpx;
+  margin-top: 64rpx;
+  margin-bottom: 50rpx;
+}
+.prefix.data-v-f66f984f {
+  padding: 5px;
+  margin-right: 5px;
+  background-color: #e4e4e4;
+  font-size: 14px;
+  color: #333;
+  border-right: 1px solid #ccc;
+}
+.input.data-v-f66f984f {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: auto;
+  height: 58px;
+  background-color: #fff;
+  margin-bottom: 13px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+.bind-phone.data-v-f66f984f {
+  font-size: 16px;
+  color: #808080;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择站点",
+  "usingComponents": {
+    "bottom-loading-prompt": "../components/bottomLoadingPrompt/bottomLoadingPrompt"
+  }
+}

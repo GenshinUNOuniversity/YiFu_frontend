@@ -1,0 +1,173 @@
+.head.data-v-0979a525 {
+  height: 40vh;
+  width: 100vw;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ctn.data-v-0979a525 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swiper.data-v-0979a525 {
+  z-index: -99999;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 682rpx;
+}
+.swiper_dots.data-v-0979a525 {
+  width: 100%;
+  border-radius: 4rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+.swiper_dot.data-v-0979a525 {
+  width: 26rpx;
+  height: 8rpx;
+  gap: 0px;
+  background-color: #d8d8d8;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.navigation_white.data-v-0979a525 {
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+}
+.main_com.data-v-0979a525 {
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  padding: 0rpx;
+  height: 50vh;
+}
+.charging_station.data-v-0979a525 {
+  padding-top: 18rpx;
+  padding-left: 20rpx;
+}
+.charging_station_name.data-v-0979a525 {
+  font-size: 32rpx;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #3d3d3d;
+}
+.more_info.data-v-0979a525 {
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.scan_to_charge_ctn.data-v-0979a525 {
+  padding: 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scan_to_charge.data-v-0979a525 {
+  font-size: 48rpx;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.start_bond.data-v-0979a525 {
+  font-size: 48rpx;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.operation.data-v-0979a525 {
+  padding: 16rpx 32rpx 32rpx 32rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: 500;
+  height: 100%;
+}
+.notifications.data-v-0979a525 {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-left: 26rpx;
+  margin-right: 26rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.in_charging.data-v-0979a525 {
+  height: 108rpx;
+  position: sticky;
+  top: 0px;
+  margin-bottom: 22rpx;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+  z-index: 100000;
+}
+.total_time.data-v-0979a525 {
+  display: flex;
+  flex-direction: row;
+  z-index: 0;
+  width: 698rpx;
+}
+.charging_time.data-v-0979a525 {
+  width: 112rpx;
+  height: 60rpx;
+  background: #d8d8d8;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.charging_info.data-v-0979a525 {
+  width: 100%;
+  height: 108rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.infotext.data-v-0979a525 {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.pre_end.data-v-0979a525 {
+  width: 100rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rpx;
+  box-sizing: border-box;
+  border: 0.5px solid #b11f26;
+  font-size: 20rpx;
+  font-weight: normal;
+  text-align: center;
+  color: #b11f26;
+  margin-right: 38rpx;
+}
+.inProgressHistoryCard.data-v-0979a525 {
+  top: -60rpx;
+  position: sticky;
+  box-sizing: border-box;
+}
+.station_state.data-v-0979a525 {
+  font-size: 22rpx;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12rpx;
+  padding: 8rpx 12rpx 8rpx 12rpx;
+}

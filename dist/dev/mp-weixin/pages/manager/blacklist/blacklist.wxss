@@ -1,0 +1,37 @@
+
+.title.data-v-defada78 {
+  text-align: center;
+  font-size: 50rpx;
+  margin-top: 16px;
+}
+.container.data-v-defada78 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contain-box.data-v-defada78 {
+  background-color: rgba(230, 230, 230);
+  box-shadow: 0px 5px 20px 0px rgba(161, 161, 161);
+  padding: 32rpx;
+  margin-top: 40rpx;
+  width: 80%;
+  border-radius: 30rpx;
+}
+.delete.data-v-defada78 {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 500rpx;
+  margin-top: -100rpx;
+}
+.addBtn.data-v-defada78 {
+  margin-top: 60rpx;
+  width: 80%;
+}
+.inputCode.data-v-defada78 {
+  margin-top: 20rpx;
+  border: 2px solid #686868;
+  border-radius: 12px;
+  height: 80rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}

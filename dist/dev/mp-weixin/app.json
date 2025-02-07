@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/charging/index",
+    "pages/my/index",
+    "pages/search/index",
+    "pages/search/searchmain/index",
+    "pages/search/itemcontent/index",
+    "pages/report/report",
+    "pages/charging/chargeHistory/index",
+    "pages/report/reportHistory/index",
+    "pages/report/reportTitle/reportTitle",
+    "pages/components/startCharging/index",
+    "pages/charging/prepareCharge/index",
+    "pages/components/userProfile/userProfile",
+    "pages/components/previewPhoto/previewPhoto",
+    "pages/report/reportSuccess/reportSuccess",
+    "pages/my/edit/edit",
+    "pages/manager/station/station",
+    "pages/manager/handleReport/handleReport",
+    "pages/manager/handleReport/reportDetail/reportDetail",
+    "pages/manager/handleReport/passReport/passReport",
+    "pages/manager/handleReport/rejectReport/rejectReport",
+    "pages/manager/station/pileDetail/pileDetail",
+    "pages/manager/index",
+    "pages/manager/newsManage/newsManage",
+    "pages/components/news/news",
+    "pages/manager/blacklist/blacklist",
+    "pages/manager/auditScooter/auditScooter",
+    "pages/manager/auditScooter/scooterDetail",
+    "pages/my/phoneManage/phoneManage",
+    "pages/my/deleteAccount/deleteAccount"
+  ],
+  "window": {
+    "navigationBarTitleText": "Scooter",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/search/index",
+        "text": "查询",
+        "iconPath": "static/search_unselect.png",
+        "selectedIconPath": "static/search_select.png"
+      },
+      {
+        "pagePath": "pages/charging/index",
+        "text": "充电",
+        "iconPath": "static/charging_unselect.png",
+        "selectedIconPath": "static/charging_select.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/user_unselect.png",
+        "selectedIconPath": "static/user_select.png"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的地理位置将用于显示您距离各个充电站的距离"
+    }
+  },
+  "usingComponents": {}
+}

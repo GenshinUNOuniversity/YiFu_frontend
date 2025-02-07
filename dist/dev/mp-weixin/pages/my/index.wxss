@@ -1,0 +1,24 @@
+.header-unlogin.data-v-276ac604 {
+  height: 60vh;
+  width: 100vw;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-unlogin.data-v-276ac604 {
+  height: calc(40vh - 50px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6vh;
+}
+.bigtext.data-v-276ac604 {
+  color: gray;
+  font-size: 2rem;
+}
+.smalltext.data-v-276ac604 {
+  color: gray;
+}

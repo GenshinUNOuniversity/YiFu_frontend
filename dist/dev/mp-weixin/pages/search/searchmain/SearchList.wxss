@@ -1,0 +1,59 @@
+
+.searchListTop.data-v-b98ba62e {
+  width: auto;
+  padding: 0 15px;
+  margin: 23px auto 0;
+}
+.textFreeNumber.data-v-b98ba62e {
+  display: inline-block;
+  margin-top: 5px;
+}
+.search.data-v-b98ba62e {
+  /* height: 156px; */
+
+  width: auto;
+  padding: 0 15px;
+  margin: 18px auto 0;
+  /* background-color: #fff; */
+  /* border-top-left-radius: 20px; */
+}
+.searchTitle.data-v-b98ba62e {
+  display: flex;
+}
+.searchTitleLeft.data-v-b98ba62e {
+  font-size: 12px;
+  color: #3d3d3d;
+  width: 111px;
+  height: 31.5px;
+  background-color: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: -8px;
+}
+.searchTitleRight.data-v-b98ba62e {
+  height: 31.5px;
+  width: 235px;
+  border-bottom-left-radius: 7px;
+  background-color: #f3f3f3;
+  z-index: 1;
+  position: absolute;
+  left: 130px;
+}
+.searchList.data-v-b98ba62e {
+  /* height: 124.5px; */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18rpx;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr 0fr 0fr 0fr 0fr;
+}
+.searchItem.data-v-b98ba62e {
+  width: 115rpx;
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+}
+.stateIcon.data-v-b98ba62e {
+  width: 120rpx;
+  height: 7px;
+}

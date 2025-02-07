@@ -1,0 +1,1 @@
+<view class="title data-v-b6726967">处理结果</view><view class="input-box data-v-b6726967"><block wx:if="{{r0}}"><textarea class="input-area data-v-b6726967" placeholder="请输入原因" maxlength="500" value="{{a}}" bindinput="{{b}}"/></block></view><view class="pass data-v-b6726967" bindtap="{{c}}">通过</view>

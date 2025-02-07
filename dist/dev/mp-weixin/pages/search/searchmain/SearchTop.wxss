@@ -1,0 +1,85 @@
+
+.navigatorBG.data-v-3a9634a9 {
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  width: 100%;
+  height: 234px;
+  background-color: #242424;
+}
+.topZheZhao.data-v-3a9634a9 {
+  width: 100%;
+  position: fixed;
+  height: 44px;
+
+  z-index: 999;
+  background-color: #242424;
+}
+.headNavigator.data-v-3a9634a9 {
+  position: fixed;
+  background-color: #242424;
+  width: 100%;
+  height: 44px;
+  padding-left: 16px;
+  color: #fff;
+  z-index: 999;
+}
+.header.data-v-3a9634a9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+}
+.backIcon.data-v-3a9634a9 {
+  height: 20px;
+  width: 20px;
+}
+.position.data-v-3a9634a9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+  margin-top: 3px;
+}
+.textPosition.data-v-3a9634a9 {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+.positionIcon.data-v-3a9634a9 {
+  width: 14px;
+  height: 14px;
+}
+.announcement.data-v-3a9634a9 {
+  display: flex;
+  height: 162px;
+  width: auto;
+  padding: 0 15px;
+  margin: 19px auto 0;
+  /* background-color: pink; */
+}
+.textRule.data-v-3a9634a9 {
+  position: relative;
+  height: 100%;
+  width: 70%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.announcementTitle.data-v-3a9634a9 {
+  display: inline-block;
+  margin: 12px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.textContentHidden.data-v-3a9634a9 {
+  /* display: inline-block; */
+  margin: 0 12px 18px 12px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /*内容限制的行数 需要几行写几就行*/
+  -webkit-box-orient: vertical;
+}

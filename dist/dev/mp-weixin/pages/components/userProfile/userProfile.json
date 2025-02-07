@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "填写个人信息",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "profile-phone-input": "../profilePhoneInput/profilePhoneInput"
+  }
+}

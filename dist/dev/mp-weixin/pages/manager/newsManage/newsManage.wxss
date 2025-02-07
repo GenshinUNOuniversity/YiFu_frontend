@@ -1,0 +1,76 @@
+
+.ctn.data-v-6e5ac313 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  padding-top: 16px;
+}
+.button.data-v-6e5ac313 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0052d9;
+  align-self: stretch;
+  margin: 16px;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 0;
+}
+.notifications.data-v-6e5ac313 {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-left: 26rpx;
+  margin-right: 26rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: st;
+}
+.announcement.data-v-6e5ac313 {
+  display: flex;
+  height: 162px;
+  width: auto;
+  margin: 12px;
+  /* background-color: pink; */
+}
+.textRule.data-v-6e5ac313 {
+  position: relative;
+  height: 100%;
+  width: 70%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.announcementTitle.data-v-6e5ac313 {
+  display: inline-block;
+  margin: 12px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.textContentHidden.data-v-6e5ac313 {
+  /* display: inline-block; */
+  margin: 0 12px 18px 12px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /*内容限制的行数 需要几行写几就行*/
+  -webkit-box-orient: vertical;
+}
+.input.data-v-6e5ac313 {
+  background-color: #fff;
+  padding: 8px;
+  width: auto;
+  margin: 16px;
+}
+.edit-button.data-v-6e5ac313 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

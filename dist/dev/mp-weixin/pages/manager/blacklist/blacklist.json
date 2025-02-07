@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "黑名单管理",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "bottom-loading-prompt": "../../components/bottomLoadingPrompt/bottomLoadingPrompt",
+    "add-black-list-bottom": "../../components/addBlackListBottom/addBlackListBottom"
+  }
+}

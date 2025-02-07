@@ -1,0 +1,1 @@
+<view class="title data-v-f66f984f">修改手机号</view><profile-phone-input wx:if="{{d}}" class="data-v-f66f984f" bindwxPhoneCode="{{a}}" u-i="f66f984f-0" bind:__l="__l" bindupdatePhone="{{b}}" bindupdateCode="{{c}}" u-p="{{d}}"/><view class="title data-v-f66f984f">注销帐号</view><button class="data-v-f66f984f" type="warn" style="width:80%" bindtap="{{e}}">注销帐号</button>

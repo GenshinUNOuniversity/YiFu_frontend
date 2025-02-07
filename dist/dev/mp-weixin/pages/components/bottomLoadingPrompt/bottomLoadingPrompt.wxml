@@ -1,0 +1,1 @@
+<view wx:if="{{a}}" class="loading data-v-a1c3e480">无数据</view><view wx:elif="{{b}}" class="loading data-v-a1c3e480">Loading...</view><view wx:elif="{{c}}" class="loading data-v-a1c3e480">- THE END -</view>

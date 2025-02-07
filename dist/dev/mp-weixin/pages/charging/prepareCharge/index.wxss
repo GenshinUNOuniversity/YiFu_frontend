@@ -1,0 +1,120 @@
+
+.title1.data-v-3f77f74d {
+  height: 35px;
+  font-family: SourceHanSansCN-Bold;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  padding-top: 32px;
+  margin-left: 16px;
+  /* 正文色/正文色 */
+  color: #1a1a1a;
+}
+.station-info.data-v-3f77f74d {
+  padding-top: 44px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 6px;
+}
+.info-content.data-v-3f77f74d {
+  width: 80px;
+  height: 23px;
+  font-family: SourceHanSansCN-Bold;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0px;
+
+  /* 正文色/正文色 */
+  color: #1a1a1a;
+}
+.info-report.data-v-3f77f74d {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.report-text.data-v-3f77f74d {
+  width: 26px;
+  height: 19px;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: right;
+  letter-spacing: 0px;
+  color: #3d3d3d;
+}
+.report-icon.data-v-3f77f74d {
+  width: 16px;
+  height: 16px;
+}
+.content.data-v-3f77f74d {
+  width: auto;
+  background-color: white;
+  margin: 0rpx 32rpx 32rpx 32rpx;
+}
+.free.data-v-3f77f74d {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.vehicle-info.data-v-3f77f74d {
+  margin-left: 16px;
+  width: 80px;
+  height: 23px;
+  font-family: SourceHanSansCN-Bold;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+.vehicle-content.data-v-3f77f74d {
+  width: auto;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 130px;
+  background-color: white;
+}
+.status-content.data-v-3f77f74d {
+  margin-left: 12px;
+  margin-top: 15px;
+  padding-right: 16px;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  /* 设置超出多少行隐藏 */
+  -webkit-box-orient: vertical;
+  color: #1a1a1a;
+}
+.upload-img.data-v-3f77f74d {
+  width: 80px;
+  height: 80px;
+  margin-left: 12px;
+  margin-top: 6px;
+  /* 功能色/中性色/Gray1-Hover */
+  background: #f3f3f3;
+}
+.my-scooter-content.data-v-3f77f74d {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.submit.data-v-3f77f74d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0052d9;
+  margin: 16px;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 16px;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "处理详情",
+  "usingComponents": {
+    "add-black-list-with-type": "../../../components/addBlackListWithType/addBlackListWithType",
+    "add-black-list-bottom": "../../../components/addBlackListBottom/addBlackListBottom"
+  }
+}

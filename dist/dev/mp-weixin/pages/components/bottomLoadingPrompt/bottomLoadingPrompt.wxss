@@ -1,0 +1,10 @@
+
+.loading.data-v-a1c3e480 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #c1c0c0;
+  height: 100%;
+  padding: 16px;
+}

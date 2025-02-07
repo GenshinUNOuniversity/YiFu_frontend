@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人信息修改",
+  "usingComponents": {
+    "profile-phone-input": "../../components/profilePhoneInput/profilePhoneInput"
+  }
+}

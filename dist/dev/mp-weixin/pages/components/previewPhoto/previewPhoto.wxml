@@ -1,0 +1,1 @@
+<view class="ctn data-v-0ccb4d90"><view wx:if="{{a}}" class="deleteHolder data-v-0ccb4d90" bindtap="{{b}}"><image class="delete data-v-0ccb4d90" src="/static/shanchu.svg" mode="scaleToFill"/></view><image class="data-v-0ccb4d90" src="{{c}}" mode="aspectFit" style="height:100%;width:100vw" bindtap="{{d}}"/></view>

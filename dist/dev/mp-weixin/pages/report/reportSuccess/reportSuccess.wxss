@@ -1,0 +1,71 @@
+.font-title.data-v-29334861 {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.font-title2.data-v-29334861 {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.font-body.data-v-29334861 {
+  font-size: 30rpx;
+}
+.font-caption.data-v-29334861 {
+  font-size: 26rpx;
+}
+.font-caption2.data-v-29334861 {
+  font-size: 24rpx;
+}
+.divider-color.data-v-29334861 {
+  background: rgba(0, 0, 0, 0.1);
+}
+.ctn.data-v-29334861 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.pic.data-v-29334861 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.pic1.data-v-29334861 {
+  width: 65.88px;
+  height: 76.67px;
+}
+.pic2.data-v-29334861 {
+  width: 40.83px;
+  margin-bottom: -13.17px;
+  margin-left: -26.06px;
+  height: 40.83px;
+}
+.report.data-v-29334861 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #0052d9;
+}
+.where.data-v-29334861 {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #1a1a1a;
+}
+.return.data-v-29334861 {
+  border-radius: 4px;
+  align-self: stretch;
+  margin: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* 功能色/品牌色/Brand8-Normal */
+  border: 1px solid #0052d9;
+  color: #0052d9;
+  padding: 16px;
+}

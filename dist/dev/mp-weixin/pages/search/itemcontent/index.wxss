@@ -1,0 +1,90 @@
+
+.btn.data-v-44367408 {
+  position: absolute;
+  transform: translateX(-75px);
+  left: 50%;
+  width: 150px;
+  font-size: 20px;
+  font-weight: 900;
+}
+.itemcontent.data-v-44367408 {
+  position: relative;
+  margin: 50px auto;
+  height: 500px;
+  width: 80%;
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 20px;
+}
+.backIcon.data-v-44367408 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 10px;
+  top: 10px;
+}
+.textTitle.data-v-44367408 {
+  margin: 10px;
+  text-align: center;
+
+  font-weight: 900;
+}
+.freeIcon.data-v-44367408 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60px);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: rgb(129, 179, 55);
+}
+.freeText.data-v-44367408 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-10px, 5px);
+
+  font-size: 20px;
+  color: rgb(129, 179, 55);
+  font-size: 18px;
+  font-weight: 900;
+}
+.State.data-v-44367408 {
+  position: relative;
+  margin: 20px auto;
+  height: 50px;
+  display: flex;
+}
+.centerText.data-v-44367408 {
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.description.data-v-44367408 {
+  position: absolute;
+  bottom: 120px;
+}
+.question.data-v-44367408 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 10px;
+}
+
+/* 其实可以和上面的代码合并一下 但是我先这样写吧 别骂我呜呜呜 */
+.busyIcon.data-v-44367408 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60px);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: rgb(189, 49, 36);
+}
+.busyText.data-v-44367408 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-15px, 5px);
+  font-size: 20px;
+  color: rgb(189, 49, 36);
+  font-size: 18px;
+  font-weight: 900;
+}

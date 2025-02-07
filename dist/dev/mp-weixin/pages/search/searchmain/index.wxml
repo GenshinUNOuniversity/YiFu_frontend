@@ -1,0 +1,1 @@
+<search-top wx:if="{{a}}" u-i="e4cf9096-0" bind:__l="__l" u-p="{{a}}"></search-top><search-list wx:if="{{b}}" u-i="e4cf9096-1" bind:__l="__l" u-p="{{b}}"></search-list>

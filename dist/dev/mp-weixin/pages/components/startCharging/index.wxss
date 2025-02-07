@@ -1,0 +1,53 @@
+
+.icon.data-v-f02f438d {
+  display: flex;
+  margin: auto;
+  margin-top: 200rpx;
+  padding-left: 60rpx;
+  padding-bottom: 15rpx;
+}
+.charge-station.data-v-f02f438d {
+  width: 82.25px;
+  height: 70.5px;
+
+  z-index: 0;
+}
+.Oval.data-v-f02f438d {
+  width: 40.83px;
+  height: 40.83px;
+  left: -40px;
+  top: 40px;
+  z-index: 1;
+}
+.CombinedShape.data-v-f02f438d {
+  width: 21.41px;
+  height: 14.91px;
+  left: -8px;
+  top: 27px;
+  z-index: 2;
+}
+.title.data-v-f02f438d {
+  margin: auto;
+
+  left: 127px;
+  top: 389px;
+  width: 120px;
+  height: 35px;
+  font-family: SourceHanSansCN-Bold;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #07c160;
+}
+.content.data-v-f02f438d {
+  margin: auto;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0px;
+
+  /* 正文色/正文色 */
+  color: #1a1a1a;
+}

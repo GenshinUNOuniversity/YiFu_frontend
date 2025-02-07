@@ -1,0 +1,1 @@
+<view class="title data-v-5bbee87f">驳回原因</view><view class="input-box data-v-5bbee87f"><block wx:if="{{r0}}"><textarea class="input-area data-v-5bbee87f" placeholder="请输入原因" maxlength="500" value="{{a}}" bindinput="{{b}}"/></block></view><view class="pass data-v-5bbee87f" bindtap="{{c}}">驳回</view>
