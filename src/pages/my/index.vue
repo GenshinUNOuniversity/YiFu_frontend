@@ -1,8 +1,8 @@
 <template>
   <!-- <div style="height: var(--status-bar-height); width: 100vw;" /> -->
-  <div v-if="isLogin">
+  <div v-if="!isLogin">
     <div class="header-unlogin">
-      <image :src="'../../static/logo-main.png'"
+      <image src="../../static/logo_main.png"
       style="height: 20vmin; width: 20vmin;"
       @click="login" />
     </div>
@@ -20,7 +20,7 @@
       <image :src="userInfo?.avatarUrl || '../../static/avatar.png'"
       style="height: 20vmin; width: 20vmin;" />
       <div style="display: flex; gap: 20px">
-        <span style="color: white;">ID：{{ userInfo?.Id || '未知' }}</span>
+        <span style="color: white;">ID：{{ userInfo?.userId || '未知' }}</span>
         <div style="display: flex; align-items: center; gap: 2px">
           <span style="color: white;">信用分：{{ userInfo?.honest || '未知' }}</span>
           <image src="../../static/learn_more.svg" style="height: 15px; width: 15px;" @click="honestyInfo" />
@@ -31,8 +31,9 @@
     <div class="body-login">
       <div style="height: 40px; width: 100vw;">
         <image src="../../static/message.png" style="height: 30px; width: 30px; position: absolute;" />
+        <span style="color: green;">我的消息</span>
       </div>
-      <div style="height: 40px; width: 100vw;">
+      <div style="height: 40px; width: 100vw;" @click="editScooter">
         <span style="color: green;">我的小马</span>
       </div>
       <div style="height: 40px; width: 100vw;">
@@ -41,8 +42,11 @@
       <div style="height: 40px; width: 100vw;">
         <span style="color: green;">我要反馈</span>
       </div>
+      <div class="logout-button" @click="editUserProfile">
+        <span style="color: purple;">修改个人信息</span>
+      </div>
       <div class="logout-button" @click="logout">
-        <span style="color: red">退出登录</span>
+        <span style="color: red;">退出登录</span>
       </div>
     </div>
   </div>
@@ -57,13 +61,14 @@ import { ScooterVO } from '@/api/scooter';
 import { useTrack } from '@/business/track/useTrack';
 
 const trackService = useTrack();
-const status = ref<Role>(uni.getStorageSync('status') || 'None');
+// const status = ref<Role>(uni.getStorageSync('user-profile').role || 'None');
 const userInfo = ref<UserProfileVO>();
 const normalScooters = ref<ScooterVO[]>([]);
 const auditingScooters = ref<ScooterVO[]>([]);
 const rejectedScooters = ref<ScooterVO[]>([]);
 
-const isLogin = ref(!(uni.getStorageSync('auth') === ''));
+// const isLogin = ref(!(uni.getStorageSync('auth') === ''));
+const isLogin = ref(true);
 
 const login = async () => {
   try {
@@ -71,23 +76,24 @@ const login = async () => {
     isLogin.value = true;
     onShowFun();
   } catch (error) {
-    uni.showToast({
-      title: '登录失败',
-      icon: 'error',
-    });
+    // uni.showToast({
+    //   title: '登录失败',
+    //   icon: 'error',
+    //   duration: 500
+    // });
   }
 };
 
 const onShowFun = async () => {
-  await api.getUserInfo().then((res) => {
+  await api.getUserInfo(uni.getStorageSync('userId')).then((res) => {
     userInfo.value = res.data;
-    status.value = userInfo.value.role;
-    if (res.data.userType === UserType.Staff && res.data.role === Role.Manager) {// res.data.stationId
-      uni.setStorage({
-        key: 'stationId',
-        data: res.data.stationId,
-      });
-    }
+    // status.value = userInfo.value.role;
+    // if (userInfo.value.stationId) {
+    //   uni.setStorage({
+    //     key: 'stationId',
+    //     data: res.data.stationId,
+    //   });
+    // }
   });
 
   api.getUserScooterList({
@@ -105,6 +111,7 @@ const onShowFun = async () => {
     });
   });
   
+  // 是否可以去掉这个函数？
   trackService.doTrack({
     pgid: trackService.PageId.My,
     eid: '',
@@ -113,6 +120,21 @@ const onShowFun = async () => {
 };
 
 onShow(() => {
+  // 检查数据是否损坏
+  console.log("my:onshow", isLogin);
+  if (isLogin.value === false) {
+    return;
+  }
+  const id = uni.getStorageSync('userId');
+  if (id === '') {
+    uni.showToast({
+      title: '本地数据受损，请重新登录',
+      icon: 'error',
+      mask: true,
+      duration: 1000
+    });
+    return;
+  }
   onShowFun();
 });
 
@@ -138,8 +160,14 @@ const editScooter = () => {
 
 const honestyInfo = () => {
   uni.navigateTo({
-    url: `./honestyInfo/honestyInfo`,
+    url: `./honestyInfo/honestyInfo`
   });
+}
+
+const editUserProfile = () => {
+  uni.navigateTo({
+    url: `./editUserProfile/editUserProfile`
+  })
 }
 
 const logout = () => {

@@ -9,7 +9,7 @@ export interface UserProfileVO {
    */
   avatarUrl: string;
   /**
-   * 学院
+   * 学部
    */
   faculty?: string;
   /**
@@ -25,15 +25,11 @@ export interface UserProfileVO {
    */
   profileState: ProfileState;
   /**
-   * 真实姓名
-   */
-  realName: string;
-  /**
    * 编号
    */
-  Id?: string;
+  userId: string;
   /**
-   * 用户类型
+   * 用户类型，工作人员/学生
    */
   userType: UserType;
   /**
@@ -48,6 +44,10 @@ export interface UserProfileVO {
    * 信用分
    */
   honest?: number;
+  /**
+   * 封禁的原因
+   */
+  blacklistReason?: UserBlackListReasonVO;
 }
 
 /**
@@ -142,15 +142,11 @@ export interface UpdateUserProfileDto {
   /**
    * 学院
    */
-  facultyId: number;
+  faculty: string;
   /**
    * 昵称
    */
   nickname: string;
-  /**
-   * 真实姓名
-   */
-  realName: string;
   /**
    * 学号
    */
@@ -158,16 +154,17 @@ export interface UpdateUserProfileDto {
   avatarUrl: string;
 }
 
-const getUserInfo = async () => {
-  const result = await instance.get<UserProfileVO>('/user/profile');
-  uni.setStorageSync('status', result.data.role);
+const getUserInfo = async (userId: number) => {
+  const result = await instance.get<UserProfileVO>(`/api/users/${userId}`);
+  // 此处应有错误信息处理
+  uni.setStorageSync('user-profile', result.data);
   return result;
 };
 const managerGetUserInfo = async (userId: number) => {
-  return instance.get<UserProfileInfoVO>(`/user/${userId}/profile`);
+  return instance.get<UserProfileVO>(`/user/${userId}/profile`);
 };
 const changeUserInfo = async (data: UpdateUserProfileDto, userType: UserType) => {
-  return instance.put(`/user/profile?type=${userType === UserType.Student ? 'student' : 'stuff'}`, data);
+  return instance.put(`/api/users/profile?type=${userType === UserType.Student ? 'student' : 'stuff'}`, data);
 };
 const getManager = () => {
   return instance.get<UserProfileVO>('/user/manager');

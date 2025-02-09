@@ -3,19 +3,19 @@ import { instance } from './instance';
 /**
  * 用户登录返回VO
  */
-export interface UserLoginVO {
+export interface UserLogin {
   /**
    * 是否需要录入信息
    */
   needUpdateProfile: boolean;
-  token: TokenVO;
+  token: Token;
   userId: number;
 }
 
 /**
- * TokenVO，token
+ * token
  */
-export interface TokenVO {
+export interface Token {
   /**
    * 认证Token
    */
@@ -30,10 +30,12 @@ const login = async () => {
   uni.clearStorageSync();
   return new Promise((resolve, reject) => {
     uni.login({
+      provider: "weixin",
+      onlyAuthorize: true,
       success: (res) => {
         uni.showLoading({ title: '登录中' });
         instance
-          .post<UserLoginVO>('/login/wechat', { code: res.code })
+          .post<UserLogin>('/api/login/users', { code: res.code })
           .then((res) => {
             uni.hideLoading();
             if (res) {
@@ -41,7 +43,12 @@ const login = async () => {
               uni.setStorageSync('refresh', res.data.token.refresh);
               uni.setStorageSync('userId', res.data.userId);
               if (res.data.needUpdateProfile) {
-                uni.navigateTo({ url: '/pages/components/userProfile/userProfile' });
+                uni.showToast({
+                  title: '注册成功，即将跳转到个人信息填写页面',
+                  icon: 'none',
+                  duration: 1000
+                });
+                uni.navigateTo({ url: '../pages/components/userProfile/userProfile' });
               }
             }
             resolve(res);
@@ -50,6 +57,7 @@ const login = async () => {
             uni.showToast({
               title: '登录失败',
               icon: 'error',
+              duration: 500
             });
             reject();
           });
@@ -58,6 +66,7 @@ const login = async () => {
         uni.showToast({
           title: '登录失败',
           icon: 'error',
+          duration: 500
         });
         reject();
       },
@@ -65,11 +74,14 @@ const login = async () => {
   });
 };
 
+/**
+ * 使用现有的refresh字段从后台获取新的auth和refresh字段
+ */
 const refresh = async () => {
   const refresh = uni.getStorageSync('refresh');
-  instance.post<TokenVO>('/login/refresh', { refresh }).then((res) => {
+  instance.post<Token>('/api/refresh', { refresh: refresh }).then((res) => {
     if (res) {
-      uni.setStorage({
+      uni.setStorage({//改成同步接口？
         key: 'auth',
         data: res.data.auth,
       });

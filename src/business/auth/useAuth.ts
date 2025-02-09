@@ -1,5 +1,5 @@
 import { instance } from '@/api/instance';
-import { TokenVO, UserLoginVO } from '@/api/login';
+import { Token, UserLogin } from '@/api/login';
 import { HttpResponse } from 'luch-request';
 
 let callbackList = Array<[() => void, (reason?: any) => void]>();
@@ -54,7 +54,7 @@ export const useAuth = () => {
 
   const refreshLogin = async () => {
     try {
-      await instance.post<TokenVO>('/login/refresh', { refresh: authStorage.refresh });
+      await instance.post<Token>('/login/refresh', { refresh: authStorage.refresh });
     } catch (e) {
       console.error(e);
     }
@@ -110,10 +110,10 @@ export const useAuth = () => {
       uni.hideLoading();
     }
 
-    let loginRes: HttpResponse<UserLoginVO>;
+    let loginRes: HttpResponse<UserLogin>;
     uni.showLoading({ title: '登录中' });
     try {
-      loginRes = await instance.post<UserLoginVO>('/login/wechat', { code: codeRes.code });
+      loginRes = await instance.post<UserLogin>('/login/wechat', { code: codeRes.code });
     } catch (e) {
       console.error(e);
       uni.showToast({

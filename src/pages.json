@@ -9,15 +9,15 @@
     {
       "path": "pages/charging/index",
       "style": {
-        "navigationBarTitleText": "充电"
-        "navigationStyle": "custom",
+        "navigationBarTitleText": "充电",
+        "navigationStyle": "custom"
         // "onReachBottomDistance": 50
       }
     },
     {
       "path": "pages/my/index",
       "style": {
-        "navigationBarTitleText": "我的"
+        "navigationBarTitleText": "我的",
         "navigationStyle": "custom"
       }
     },
@@ -119,7 +119,7 @@
       "path": "pages/manager/handleReport/handleReport",
       "style": {
         "navigationBarTitleText": "举报处理",
-        "onReachBottomDistance": 50
+        // "onReachBottomDistance": 50
       }
     },
     {
@@ -153,31 +153,19 @@
       }
     },
     {
-      "path": "pages/manager/newsManage/newsManage",
-      "style": {
-        "navigationBarTitleText": "公告管理"
-      }
-    },
-    {
-      "path": "pages/components/news/news",
-      "style": {
-        "navigationBarTitleText": "公告"
-      }
-    },
-    {
       "path": "pages/manager/blacklist/blacklist",
       "style": {
         "navigationBarTitleText": "黑名单管理",
-        "enablePullDownRefresh": true,
-        "onReachBottomDistance": 50
+        "enablePullDownRefresh": true
+        // "onReachBottomDistance": 50
       }
     },
     {
       "path": "pages/manager/auditScooter/auditScooter",
       "style": {
         "navigationBarTitleText": "审核电动车",
-        "enablePullDownRefresh": true,
-        "onReachBottomDistance": 50
+        "enablePullDownRefresh": true
+        // "onReachBottomDistance": 50
       }
     },
     {
@@ -196,6 +184,18 @@
       "path": "pages/my/deleteAccount/deleteAccount",
       "style": {
         "navigationBarTitleText": "注销帐号"
+      }
+    },
+    {
+      "path": "pages/my/honestyInfo/honestyInfo",
+      "style": {
+        "navigationBarTitleText": "关于信用分"
+      }
+    },
+    {
+      "path": "pages/my/editUserProfile/editUserProfile",
+      "style": {
+        "navigationBarTitleText": "编辑个人信息"
       }
     }
   ],
