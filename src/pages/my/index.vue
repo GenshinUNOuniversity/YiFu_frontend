@@ -56,16 +56,14 @@
 import { onShow } from '@dcloudio/uni-app';
 import { ref } from 'vue';
 import api from '@/api';
-import { Role, UserProfileVO, UserType } from '@/api/user';
-import { ScooterVO } from '@/api/scooter';
+import { UserProfileVO } from '@/api/user';
+import { ScooterProfileVO } from '@/api/scooter';
 import { useTrack } from '@/business/track/useTrack';
 
 const trackService = useTrack();
 // const status = ref<Role>(uni.getStorageSync('user-profile').role || 'None');
 const userInfo = ref<UserProfileVO>();
-const normalScooters = ref<ScooterVO[]>([]);
-const auditingScooters = ref<ScooterVO[]>([]);
-const rejectedScooters = ref<ScooterVO[]>([]);
+const Scooters = ref<ScooterProfileVO>();
 
 // const isLogin = ref(!(uni.getStorageSync('auth') === ''));
 const isLogin = ref(true);
@@ -96,19 +94,8 @@ const onShowFun = async () => {
     // }
   });
 
-  api.getUserScooterList({
-    pageNum: 1,
-    pageSize: 100,
-  }).then((res) => {
-    normalScooters.value = res.data.data.filter((scooter) => {
-      return scooter.status === 'Normal';
-    });
-    auditingScooters.value = res.data.data.filter((scooter) => {
-      return scooter.status === 'Auditing';
-    });
-    rejectedScooters.value = res.data.data.filter((scooter) => {
-      return scooter.status === 'Rejected';
-    });
+  api.getUserScooter().then((res) => {
+    Scooters.value = res.data;
   });
   
   // 是否可以去掉这个函数？
@@ -121,7 +108,7 @@ const onShowFun = async () => {
 
 onShow(() => {
   // 检查数据是否损坏
-  console.log("my:onshow", isLogin);
+  console.log("my:onshow");
   if (isLogin.value === false) {
     return;
   }
@@ -129,7 +116,7 @@ onShow(() => {
   if (id === '') {
     uni.showToast({
       title: '本地数据受损，请重新登录',
-      icon: 'error',
+      icon: 'none',
       mask: true,
       duration: 1000
     });
@@ -139,23 +126,10 @@ onShow(() => {
 });
 
 const editScooter = () => {
-  if (normalScooters.value.length > 0) {
-    uni.navigateTo({
-      url: `/pages/my/edit/edit?haveScooter=true&scooterId=${normalScooters.value[0].scooterId}&code=${normalScooters.value[0].code}&checked=true`,
-    });
-  } else if (auditingScooters.value.length > 0) {
-    uni.navigateTo({
-      url: `/pages/my/edit/edit?haveScooter=true&scooterId=${auditingScooters.value[0].scooterId}&code=${auditingScooters.value[0].code}`,
-    });
-  } else if (rejectedScooters.value.length > 0) {
-    uni.navigateTo({
-      url: `/pages/my/edit/edit?haveScooter=true&scooterId=${rejectedScooters.value[0].scooterId}&code=${rejectedScooters.value[0].code}&reject=true`,
-    });
-  } else {
     uni.navigateTo({
       url: `/pages/my/edit/edit?haveScooter=false`,
     });
-  }
+  // }
 };
 
 const honestyInfo = () => {
@@ -215,6 +189,16 @@ const logout = () => {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+.body-login {
+  height: calc(40vh - 50px);
+  width: 100vw;
+  // border: 2px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .logout-button {

@@ -21,29 +21,29 @@ export interface UserProfileVO {
    */
   phone: string;
   /**
-   * 个人信息状态
-   */
-  profileState: ProfileState;
-  /**
-   * 编号
+   * 用户在后台服务器的编号
    */
   userId: string;
   /**
    * 用户类型，工作人员/学生
    */
-  userType: UserType;
+  // userType: UserType;
   /**
-   * 权限
+   * 权限，是否被封禁，以及是否为管理员
    */
-  role: Role;
+  // role: Role;
   /**
    * 管理的站点id
    */
-  stationId?: number;
+  // stationId?: number;
   /**
    * 信用分
    */
-  honest?: number;
+  honest: number;
+  /**
+   * 是否永久封禁
+   */
+  banned: boolean;
   /**
    * 封禁的原因
    */
@@ -53,32 +53,32 @@ export interface UserProfileVO {
 /**
  * 个人信息状态
  */
-export enum ProfileState {
-  Auditing = 'AUDITING',
-  Confirmed = 'CONFIRMED',
-  Draft = 'DRAFT',
-  None = 'NONE',
-}
+// export enum ProfileState {
+//   Auditing = 'AUDITING',
+//   Confirmed = 'CONFIRMED',
+//   Draft = 'DRAFT',
+//   None = 'NONE',
+// }
 
 /**
  * 用户类型
  */
-export enum UserType {
-  None = 'NONE',
-  Staff = 'STAFF',
-  Student = 'STUDENT',
-}
+// export enum UserType {
+//   None = 'NONE',
+//   Staff = 'STAFF',
+//   Student = 'STUDENT',
+// }
 
 /**
  * 权限
  */
-export enum Role {
-  Admin = 'Admin',
-  Banned = 'Banned',
-  Manager = 'Manager',
-  None = 'None',
-  User = 'User',
-}
+// export enum Role {
+//   Admin = 'Admin',
+//   Banned = 'Banned',
+//   Manager = 'Manager',
+//   None = 'None',
+//   User = 'User',
+// }
 
 /**
  * 用户状态（正常/封禁）
@@ -106,7 +106,13 @@ export interface UserBlackListReasonVO {
    * 操作管理员
    */
   managerName: string;
+  /**
+   * 事发站
+   */
   stationName: string;
+  /**
+   * 封禁原因
+   */
   reason: string;
 }
 
@@ -154,6 +160,11 @@ export interface UpdateUserProfileDto {
   avatarUrl: string;
 }
 
+/**
+ * 从后台服务器获取用户信息并保存到本地
+ * @param userId 后台服务器上的用户ID
+ * @returns 获取的用户信息
+ */
 const getUserInfo = async (userId: number) => {
   const result = await instance.get<UserProfileVO>(`/api/users/${userId}`);
   // 此处应有错误信息处理
@@ -163,9 +174,9 @@ const getUserInfo = async (userId: number) => {
 const managerGetUserInfo = async (userId: number) => {
   return instance.get<UserProfileVO>(`/user/${userId}/profile`);
 };
-const changeUserInfo = async (data: UpdateUserProfileDto, userType: UserType) => {
-  return instance.put(`/api/users/profile?type=${userType === UserType.Student ? 'student' : 'stuff'}`, data);
-};
+// const changeUserInfo = async (data: UpdateUserProfileDto, userType: UserType) => {
+//   return instance.put(`/api/users/profile?type=${userType === UserType.Student ? 'student' : 'stuff'}`, data);
+// };
 const getManager = () => {
   return instance.get<UserProfileVO>('/user/manager');
 };
@@ -199,7 +210,7 @@ const deleteAccount = async () => {
 };
 export default {
   getUserInfo,
-  changeUserInfo,
+  // changeUserInfo,
   getManager,
   getWXPusherQrCode,
   giveUserAccess,

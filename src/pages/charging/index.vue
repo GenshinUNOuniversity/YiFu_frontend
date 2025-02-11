@@ -132,7 +132,7 @@ import { onPageScroll, onReachBottom, onShow } from '@dcloudio/uni-app';
 import { useTrack } from '@/business/track/useTrack';
 import { useCharge } from '@/pages/charging/useCharge';
 // import Divider from '../components/divider/divider.vue';
-import { ScooterVO } from '@/api/scooter';
+import { ScooterProfileVO } from '@/api/scooter';
 // import NewsBrief from '@/pages/components/newsBrief/newsBrief.vue';
 import { onLoad } from '@dcloudio/uni-app';
 import { nextTick, ref } from 'vue';
@@ -158,7 +158,7 @@ const {
 
 const { doTrack, PageId, EventId } = useTrack();
 
-const scootersDetail = ref<ScooterVO[]>([]);
+const scootersDetail = ref<ScooterProfileVO[]>([]);
 
 const trackService = useTrack();
 
