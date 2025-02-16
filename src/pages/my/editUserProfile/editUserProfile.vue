@@ -19,7 +19,7 @@
       <span class="alert" v-if="phoneIsMissing">请填写联系方式</span>
       <div class="row">
         <label for="faculty">学部</label>
-        <picker id="faculty" mode="selector" :range="facul" :value="index" @change="logs">
+        <picker id="faculty" mode="selector" :range="facul" :value="index" @change="changeFaculty">
           <span class="uni-input">{{ facul[index] }}</span>
         </picker>
       </div>
@@ -46,7 +46,7 @@ const nicknameIsMissing = ref(false);
 const phoneIsMissing = ref(false);
 
 onShow (() => {
-  userProfile.value = uni.getStorageSync('user-profile');
+  userProfile.value = uni.getStorageSync<UserProfileVO>('user-profile');
   console.log("editUserProfile: onshow");
 });
 
@@ -114,7 +114,7 @@ const uploadForm = () => {
   }, 1000);
 }
 
-const logs = (res) => {
+const changeFaculty = (res) => {
   // console.log(res);
   // console.log(res.detail.value);
   index.value = res.detail.value;

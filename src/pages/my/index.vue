@@ -2,9 +2,7 @@
   <!-- <div style="height: var(--status-bar-height); width: 100vw;" /> -->
   <div v-if="!isLogin">
     <div class="header-unlogin">
-      <image src="../../static/logo_main.png"
-      style="height: 20vmin; width: 20vmin;"
-      @click="login" />
+      <image src="../../static/logo_main.png" style="height: 20vmin; width: 20vmin;" @click="login" />
     </div>
     <div class="body-unlogin">
       <p style="font-size: 2rem; color: gray;">hi，小马</p>
@@ -58,9 +56,9 @@ import { ref } from 'vue';
 import api from '@/api';
 import { UserProfileVO } from '@/api/user';
 import { ScooterProfileVO } from '@/api/scooter';
-import { useTrack } from '@/business/track/useTrack';
+// import { useTrack } from '@/business/track/useTrack';
 
-const trackService = useTrack();
+// const trackService = useTrack();
 // const status = ref<Role>(uni.getStorageSync('user-profile').role || 'None');
 const userInfo = ref<UserProfileVO>();
 const Scooters = ref<ScooterProfileVO>();
@@ -99,11 +97,11 @@ const onShowFun = async () => {
   });
   
   // 是否可以去掉这个函数？
-  trackService.doTrack({
-    pgid: trackService.PageId.My,
-    eid: '',
-    eventId: trackService.EventId.IMPL,
-  });
+  // trackService.doTrack({
+  //   pgid: trackService.PageId.My,
+  //   eid: '',
+  //   eventId: trackService.EventId.IMPL,
+  // });
 };
 
 onShow(() => {
@@ -127,7 +125,7 @@ onShow(() => {
 
 const editScooter = () => {
     uni.navigateTo({
-      url: `/pages/my/edit/edit?haveScooter=false`,
+      url: `./editScooterProfile/editScooterProfile`,
     });
   // }
 };
