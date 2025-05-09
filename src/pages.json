@@ -1,0 +1,164 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "pages": [
+    
+    {
+      "path": "pages/my/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/scan/index",
+      "style": {
+        "navigationBarTitleText": "扫码",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#008000"
+      }
+    },
+    {
+      "path": "pages/charging/index",
+      "style": {
+        "navigationBarTitleText": "充电",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/my/honestyInfo/honestyInfo",
+      "style": {
+        "navigationBarTitleText": "关于信用分"
+      }
+    },
+    {
+      "path": "pages/my/editUserProfile/editUserProfile",
+      "style": {
+        "navigationBarTitleText": "编辑个人信息",
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/my/editScooterProfile/editScooterProfile",
+      "style": {
+        "navigationBarTitleText": "编辑电动车信息",
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/my/message/message",
+      "style": {
+        "navigationBarTitleText": "我的消息",
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/my/message/messageDetail",
+      "style": {
+        "navigationBarTitleText": "对话",
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/my/report/report",
+      "style": {
+        "navigationBarTitleText": "我要反馈",
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/my/chargeHistory/chargeHistory",
+      "style": {
+        "navigationBarTitleText": "我的记录",
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/map/index",
+      "style": {
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "地图"
+      }
+    },
+    {
+      "path": "pages/map/stationDetail/stationDetail",
+      "style": {
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/map/stationDetail/updateMove",
+      "style": {
+        "navigationBarBackgroundColor": "#008000",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "挪车信息上传"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "fontSize": "12px",
+    "spacing": "5px",
+    "height": "50px",
+    "list": [
+      {
+        "pagePath": "pages/map/index",
+        "text": "查询",
+        "iconPath": "static/search_unselect.png",
+        "selectedIconPath": "static/search_select.png"
+      },
+      {
+        "pagePath": "pages/scan/index",
+        "text": "扫码",
+        "iconPath": "static/charging_unselect.png",
+        "selectedIconPath": "static/charging_select.png"
+      },
+      // {
+      //   "pagePath": "pages/charging/index",
+      //   "text": "充电",
+      //   "iconPath": "static/charging_unselect.png",
+      //   "selectedIconPath": "static/charging_select.png"
+      // },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/user_unselect.png",
+        "selectedIconPath": "static/user_select.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTitleText": "Scooter",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundTextStyle": "dark"
+  },
+  "condition": {
+    //模式配置，仅开发期间生效
+    "current": 0, //当前激活的模式(list 的索引项)
+    "list": [
+      {
+        "name": "", //模式名称
+        "path": "", //启动页面，必选
+        "query": "" //启动参数，在页面的onLoad函数里面得到
+      }
+    ]
+  }
+}
